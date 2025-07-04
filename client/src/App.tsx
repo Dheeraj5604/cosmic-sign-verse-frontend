@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import PDFUploader from "@/components/PDFUploader";
 import UploadPage from './pages/UploadPage';
+import AuthPage from "./pages/AuthPage";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,8 @@ const App = () => {
         <Sonner />
         <BrowserRouter>
           <Routes>
+            <Route path="/" element={<AuthPage />} />
+      <Route path="/upload" element={<UploadPage />} />
             <Route path="/" element={<Index />} />
             <Route
               path="/upload"
